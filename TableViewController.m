@@ -25,7 +25,6 @@
     if ([_contentList count] > 0) {
         [self.tableView reloadData];
     }
-    
 }
 
 
@@ -66,9 +65,6 @@
         
     }];
     [task resume];
-    
-    
-    
 }
 
 #pragma mark: - UITableViewDataSource
