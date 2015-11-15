@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TableViewController.h
 //  FetchImage
 //
 //  Created by Kokpheng on 11/15/15.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface TableViewController : UITableViewController
 
 
 @end
-
