@@ -7,15 +7,13 @@
 //
 #import "TableViewController.h"
 #import "ImageRecord.h"
+#import "ImageViewController.h"
 
 @interface TableViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic,strong) NSMutableArray<ImageRecord*> *contentList;
-
-
 @end
 
 @implementation TableViewController
-
 
 #pragma mark:- custom property
 
@@ -62,7 +60,6 @@
                 [self.tableView reloadData];
             }
         }
-        
     }];
     [task resume];
 }
@@ -87,11 +84,7 @@
         [self startDownloadingImage:[self.contentList objectAtIndex:indexPath.row] forIndexPath:indexPath];
         
     }
-    
-    
     return cell;
-    
-    
 }
 
 - (void)startDownloadingImage:(ImageRecord *)imageRecord forIndexPath:(NSIndexPath *)indexPath {
@@ -106,10 +99,7 @@
             dataImage = [NSData dataWithContentsOfURL:urlImage];
         });
         
-        
         dispatch_async(dispatch_get_main_queue(), ^{
-            
-            
             UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
             UIImage *image = [UIImage imageWithData:dataImage];
             self.contentList[indexPath.row].image = image;
@@ -118,6 +108,18 @@
     });
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self performSegueWithIdentifier:@"segueImageView" sender: [self.contentList objectAtIndex:indexPath.row]];
+}
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    ImageViewController  *imageViewController = segue.destinationViewController;
+    imageViewController.imageRecord = sender;
+}
 
 
 @end

@@ -15,6 +15,7 @@
 		19AE6CE01BF8888200DE3B85 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19AE6CDF1BF8888200DE3B85 /* TableViewController.m */; };
 		19AE6CE71BF888C000DE3B85 /* ImageRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 19AE6CE61BF888C000DE3B85 /* ImageRecord.m */; };
 		19AE6CE91BF8893E00DE3B85 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 19AE6CE81BF8893E00DE3B85 /* images.png */; };
+		9AA8A22F1BF9B16100C23CAC /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8A22E1BF9B16100C23CAC /* ImageViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		19AE6CE51BF888C000DE3B85 /* ImageRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageRecord.h; sourceTree = "<group>"; };
 		19AE6CE61BF888C000DE3B85 /* ImageRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageRecord.m; sourceTree = "<group>"; };
 		19AE6CE81BF8893E00DE3B85 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = SOURCE_ROOT; };
+		9AA8A22D1BF9B16100C23CAC /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		9AA8A22E1BF9B16100C23CAC /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,8 @@
 				19AE6CC71BF8885700DE3B85 /* Supporting Files */,
 				19AE6CE51BF888C000DE3B85 /* ImageRecord.h */,
 				19AE6CE61BF888C000DE3B85 /* ImageRecord.m */,
+				9AA8A22D1BF9B16100C23CAC /* ImageViewController.h */,
+				9AA8A22E1BF9B16100C23CAC /* ImageViewController.m */,
 			);
 			path = FetchImage;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA8A22F1BF9B16100C23CAC /* ImageViewController.m in Sources */,
 				19AE6CE71BF888C000DE3B85 /* ImageRecord.m in Sources */,
 				19AE6CCC1BF8885700DE3B85 /* AppDelegate.m in Sources */,
 				19AE6CE01BF8888200DE3B85 /* TableViewController.m in Sources */,
@@ -272,6 +278,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FetchImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pheng.app.FetchImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -283,6 +290,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FetchImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pheng.app.FetchImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
